@@ -1,0 +1,36 @@
+name: first workflow
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+      - name: Install Dependences
+        run: npm ci
+      - name: execute lint
+        run: npm run lint
+      - name: finish steps
+        run: echo "finish lint steps"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+      - name: Install Dependences
+        run: npm ci
+      - name: execute lint
+        run: npm run lint
+      - name: finish steps
+        run: echo "finish lint test"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+      - name: Install Dependences
+        run: npm ci
+      - name: execute lint
+        run: npm run lint
+      - name: finish steps
+        run: echo "finish lint build"
