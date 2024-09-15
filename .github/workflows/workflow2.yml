@@ -1,5 +1,7 @@
 name: second workflow
-on: [workflow_dispatch]
+on:
+  issues:
+    types: [opened, edited, milestoned]
 jobs:
   issue:
     runs-on: ubuntu-latest
