@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Install NodeJS
         uses: actions/setup-node@v3
+          with:
+            node-version: "18"
       - name: Install Dependences
         run: npm ci
       - name: execute lint
@@ -17,6 +19,8 @@ jobs:
     steps:
       - name: Install NodeJS
         uses: actions/setup-node@v3
+          with:
+            node-version: "18"
       - name: Install Dependences
         run: npm ci
       - name: execute lint
@@ -28,6 +32,8 @@ jobs:
     steps:
       - name: Install NodeJS
         uses: actions/setup-node@v3
+          with:
+            node-version: "18"
       - name: Install Dependences
         run: npm ci
       - name: execute lint
